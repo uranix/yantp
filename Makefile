@@ -15,3 +15,6 @@ yantpserver: packet.o yantpserver.o
 
 yantpclient: packet.o yantpclient.o
 	${CC} -o $@ $^ ${LIBS}
+
+test: packet.o test.o
+	${CC} -o $@ $^ ${LIBS}

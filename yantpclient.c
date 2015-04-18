@@ -77,6 +77,7 @@ int main(int argc, char **argv) {
             if (errno == EAGAIN || errno == EWOULDBLOCK)
                 continue;
             perror("recv");
+            return EXIT_FAILURE;
         }
         if (rcnt != sizeof(p))
             continue;
