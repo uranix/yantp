@@ -81,7 +81,11 @@ int main(int argc, char **argv) {
         }
         if (rcnt != sizeof(p))
             continue;
+
         tag_client_recv(&p);
+
+        if (!verify_packet(&p))
+            continue;
 
         print_packet(&p);
         meas[nrecv].rtt  = packet_roundtrip(&p);
