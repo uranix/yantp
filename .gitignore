@@ -1,0 +1,4 @@
+*.o
+yantpserver
+yantpclient
+test
